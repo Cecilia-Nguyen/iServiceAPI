@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Doc</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="register.css">
+
+<body>
+  <div class="container">
+    <% if(error != "none") {%>
+    <div style="text-align: center; font-size: 3rem;"><%= error %></div>
+    <% } %>
+    <div style=" margin-top:50px" class="mainbox row-md-6 col-md-offset-2 col-sm-8 col-sm-offset-2">
+      <div class="row">
+        <h2>Customer Registration</h2>
+        <h3>Create an iService Account</h3>
+      </div>
+      <div class="mbox">
+      </div>
+      <div class="row">
+        <form action="/experts" method='POST'>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select name="obj[country]" id="country" class="form-control">
+              <option value="Australia" selected>Australia</option>
+              <option value="India">India</option>
+              <option value="Singapore">Singapore</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div style="padding-left:0 !important;" class="form-group col-md-6">
+              <label for="fn">First Name</label>
+              <input name="obj[firstName]" type="text" class="form-control" id="fn" placeholder="First Name">
+            </div>
+            <div style="padding-right:0 !important;" class="form-group col-md-6">
+              <label for="ln">Last Name</label>
+              <input name="obj[lastName]" type="text" class="form-control" id="ln" placeholder="Last Name">
+            </div>
+
+          </div>
+
+          <div class="form-group ">
+            <label for="inputEmail4">Email</label>
+            <input name="obj[email]" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group ">
+            <label for="inputPassword4">Password</label>
+            <input name="obj[password]" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword4">Re Password</label>
+            <input name="rePassword" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+
+
+
+
+
+          <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input name="obj[address]" type="text" class="form-control" id="inputAddress"
+              placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="form-row">
+            <div style="padding-left:0 !important;" class="form-group col-md-6">
+              <label for="inputCity">City</label>
+              <input name="obj[city]" type="text" class="form-control" id="inputCity">
+            </div>
+            <div style="padding-right:0 !important;" class="form-group col-md-6">
+              <label for="inputState">State</label>
+              <input name="obj[state]" type="text" class="form-control" id="inputState">
+            </div>
+
+          </div>
+          <div class="form-group ">
+            <label for="inputZip">Zip</label>
+            <input name="obj[zipCode]" type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input name="obj[phoneNumber]" type="text" class="form-control" id="phone">
+          </div>
+          <div style="text-align:center;">
+            <button type="submit" class="btn btn-primary">Create Account</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

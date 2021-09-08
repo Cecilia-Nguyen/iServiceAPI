@@ -1,0 +1,14 @@
+button {
+  background-color: rgb(135, 173, 162) !important;
+  color: black !important;
+}
+
+h2,
+h3 {
+  color: rgb(54, 110, 112);
+  text-align: left;
+}
+
+form {
+  margin-bottom: 50px !important;
+}
