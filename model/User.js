@@ -3,15 +3,12 @@ var mongoose = require("mongoose");
 var userSchema = new mongoose.Schema({
   country: {
     type: String,
-    required: true,
   },
   firstName: {
     type: String,
-    required: true,
   },
   lastName: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
@@ -27,25 +24,24 @@ var userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
-    validate: {
-      validator: function (v) {
-        return v.length >= 8;
-      },
-      message: (props) => `${props.value} is not a valid Email id!`,
-    },
+    // required: false,
+    // validate: {
+    //   validator: function (v) {
+    //     return v.length >= 8;
+    //   },
+    //   message: (props) => `${props.value} is not a valid Email id!`,
+    // },
   },
   address: {
     type: String,
-    required: true,
+   
   },
   city: {
     type: String,
-    required: true,
+    
   },
   state: {
     type: String,
-    required: true,
   },
   zipCode: {
     type: String,
